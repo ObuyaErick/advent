@@ -1,13 +1,13 @@
-import readInput from "../assets/read-input.js";
+import readInput from "../../assets/read-input.js";
 import Device from "./device.js";
 import { ServerRack } from "./server-rack.js";
 import { Tracer } from "./tracer.js";
 
 export default function () {
   console.log("--- Day 11: Reactor ---\n");
-  const devices = readInput("reactor/devices.txt")
-    // const devices = readInput("reactor/devices.test.txt")
-    // const devices = readInput("reactor/devices.part2.test.txt")
+  const devices = readInput("2025/reactor/devices.txt")
+    // const devices = readInput("2025/reactor/devices.test.txt")
+    // const devices = readInput("2025/reactor/devices.part2.test.txt")
     .split("\n")
     .map((deviceConfig) => Device.build(deviceConfig));
   ServerRack.init(devices);
